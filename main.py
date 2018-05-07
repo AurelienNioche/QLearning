@@ -1,6 +1,5 @@
 import numpy as np
 import warnings
-import time
 
 
 warnings.filterwarnings('error')
@@ -80,7 +79,6 @@ def main():
             act = a.choose()
             print(f'Agent chose {act}')
             new_state = act
-            # new_state = act if np.random.choice([True, False]) else a.state
             a.learn(new_state=new_state)
 
             t += 1
